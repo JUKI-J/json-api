@@ -3,3 +3,11 @@ server:
 
 logging:
   config: classpath:logback.xml
+management:
+  endpoint:
+    logfile:
+      external-file: ./logs/json-api.log
+  endpoints:
+    web:
+      exposure:
+        include: health,logfile
